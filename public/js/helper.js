@@ -26,7 +26,8 @@ function AlertConfirm(title = 'Apakah Anda Yakin?', text = 'Apa anda yakin melan
     });
 }
 
-async function AjaxPost(url, param = {}, onSuccess = function () {}) {
+async function AjaxPost(url, param = {}, onSuccess = function () {
+}) {
     try {
         let response = await $.post(url, param);
         if (response['status'] === 200) {
@@ -35,4 +36,21 @@ async function AjaxPost(url, param = {}, onSuccess = function () {}) {
     } catch (e) {
         ErrorAlert('Error', e.responseText.toString());
     }
+}
+
+function DataTableGenerator(element, url = '/', col = [], colDef = [], data = {}) {
+    return $(element).DataTable({
+        scrollX: true,
+        processing: true,
+        ajax: {
+            type: 'GET',
+            url: url,
+            'data': function (d) {
+                return $.extend({}, d, data);
+            }
+        },
+        columnDefs: colDef,
+        columns: col,
+        paging: true
+    });
 }

@@ -18,18 +18,11 @@ class MemberSeeder extends Seeder
     {
         $data = [
             [
-                'username' => 'johnny',
-                'password' => 'johnny',
-                'name' => 'Johnny Abs',
+                'username' => 'member',
+                'password' => 'password',
+                'name' => 'Member',
                 'phone' => '089287258',
                 'address' => 'Jl. Surya No. 16. Surakarta'
-            ],
-            [
-                'username' => 'jenny',
-                'password' => 'jenny',
-                'name' => 'Jenny Abs',
-                'phone' => '0892872589',
-                'address' => 'Jl. Ir. Sutami No. 18. Surakarta'
             ],
         ];
 

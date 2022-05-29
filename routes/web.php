@@ -34,3 +34,13 @@ Route::group(['prefix' => 'member'], function () {
     Route::post( '/delete', [\App\Http\Controllers\Admin\MemberController::class, 'destroy']);
 });
 
+Route::group(['prefix' => 'penerimaan'], function () {
+    Route::get( '/', [\App\Http\Controllers\Admin\PenerimaanController::class, 'index']);
+    Route::get( '/data', [\App\Http\Controllers\Admin\PenerimaanController::class, 'get_data_penerimaan']);
+    Route::get( '/tambah', [\App\Http\Controllers\Admin\PenerimaanController::class, 'add_page']);
+    Route::post( '/create', [\App\Http\Controllers\Admin\MemberController::class, 'create']);
+    Route::get( '/edit/{id}', [\App\Http\Controllers\Admin\MemberController::class, 'edit_page']);
+    Route::post( '/patch', [\App\Http\Controllers\Admin\MemberController::class, 'patch']);
+    Route::post( '/delete', [\App\Http\Controllers\Admin\MemberController::class, 'destroy']);
+});
+

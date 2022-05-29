@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('/adminlte/css/adminlte.min.css')}}">
     <link href="{{ asset('/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/sweetalert2.css') }}" rel="stylesheet">
@@ -70,17 +71,35 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/karyawan"
-                                   class="nav-link">
-                                    <i class="fa fa-circle-o nav-icon" aria-hidden="true"></i>
-                                    <p>Karyawan</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="/member"
                                    class="nav-link">
                                     <i class="fa fa-circle-o nav-icon" aria-hidden="true"></i>
                                     <p>Member</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-briefcase"></i>
+                            <p>
+                                Transaksi
+                                <i class="right fa fa-angle-down"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/penerimaan"
+                                   class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon" aria-hidden="true"></i>
+                                    <p>Penerimaan</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/pengembalian"
+                                   class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon" aria-hidden="true"></i>
+                                    <p>Pengembalian</p>
                                 </a>
                             </li>
                         </ul>
